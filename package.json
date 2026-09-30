@@ -1,0 +1,12 @@
+{
+  "name": "re-pixel-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Re:Pixel Studio website",
+  "scripts": {
+    "dev": "node server.cjs",
+    "start": "node server.cjs",
+    "check": "node --check app.js && node --check server.cjs",
+    "test": "node verify.cjs"
+  }
+}
