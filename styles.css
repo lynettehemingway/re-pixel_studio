@@ -1413,8 +1413,17 @@ img.team-photo {
 .about-copy {
   animation-delay: 0.1s;
 }
-.hero-alien {
-  animation: space-drift 5.5s ease-in-out infinite;
+@keyframes alien-bob {
+  0%,
+  100% {
+    transform: translateY(6px) rotate(-9deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(-9deg);
+  }
+}
+.home-main .hero-alien {
+  animation: alien-bob 3.2s ease-in-out infinite;
 }
 .planet {
   animation: space-drift 7s ease-in-out -2s infinite;
