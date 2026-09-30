@@ -967,6 +967,105 @@ dialog p {
     display: none;
   }
 }
+/* Team introduction matches the reference's two-column heading and mascot. */
+body[data-page='team'] #app {
+  background-image:
+    linear-gradient(#eae5dc66 1px, transparent 1px),
+    linear-gradient(90deg, #eae5dc66 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.team-main {
+  margin-top: 34px;
+  background: none;
+}
+.about-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  grid-template-areas: 'heading mascot' 'copy mascot' 'photo photo';
+  gap: 16px 56px;
+  align-items: start;
+}
+.about-heading {
+  grid-area: heading;
+}
+.about-heading h1 {
+  font-size: 48px;
+}
+.about-heading h1 span {
+  font-size: 30px;
+  margin-top: 3px;
+}
+.about-copy {
+  grid-area: copy;
+  margin: 0;
+  max-width: 500px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #494b46;
+}
+.team-mascot {
+  grid-area: mascot;
+  display: grid;
+  place-items: center;
+  width: 200px;
+  aspect-ratio: 1;
+  margin-top: 6px;
+  border: 6px solid var(--lime);
+  border-radius: 50%;
+  background: #faf7ef;
+}
+.team-mascot img.about-alien {
+  width: 145px;
+  height: auto;
+}
+.about-section img.team-photo {
+  grid-area: photo;
+  justify-self: center;
+  width: calc(100% - 64px);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 55%;
+  border-radius: 16px;
+  margin-top: 12px;
+}
+@media (max-width: 650px) {
+  .team-main {
+    width: calc(100% - 40px);
+    margin-top: 30px;
+  }
+  .about-section {
+    grid-template-columns: minmax(0, 1fr) 90px;
+    grid-template-areas: 'heading mascot' 'copy copy' 'photo photo';
+    gap: 16px 14px;
+  }
+  .about-heading h1 {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+  .about-heading h1 span {
+    font-size: clamp(19px, 5vw, 24px);
+  }
+  .team-mascot {
+    width: 90px;
+    border-width: 4px;
+    margin-top: 0;
+  }
+  .team-mascot img.about-alien {
+    width: 66px;
+    height: auto;
+  }
+  .about-copy {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .about-section img.team-photo {
+    width: 100%;
+    margin-top: 2px;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

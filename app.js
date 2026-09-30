@@ -143,11 +143,11 @@ const team = /* HTML */ `
     <section class="about-section">
       <div class="about-heading">
         <h1>
-          About Us
+          Our Team
           <span>from outer space.</span>
         </h1>
-        ${alien('about-alien')}
       </div>
+      <div class="team-mascot" aria-hidden="true">${alien('about-alien')}</div>
       <p class="about-copy">
         We are an independent game studio. We consist of artists, animators, designers,
         and more! We aim to create games that bring whimsy and joy to people’s lives.
